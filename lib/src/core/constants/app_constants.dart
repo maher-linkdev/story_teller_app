@@ -13,8 +13,8 @@ class AppConstants {
 
   static List<String> lengths = [
     "Short Story",
-    "4000 - 10000 words Story",
-    "+10000 words",
+    "4000 - 7000 words Story",
+    "+7000 words",
   ];
 
   static List<String> protagonists = [
