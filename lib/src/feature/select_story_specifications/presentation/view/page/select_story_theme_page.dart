@@ -4,6 +4,8 @@ import 'package:story_teller/src/feature/common/view/component/app_spacer.dart';
 import 'package:story_teller/src/feature/select_story_specifications/presentation/view/component/select_story_specifications_title.dart';
 import 'package:story_teller/src/feature/select_story_specifications/presentation/view/component/select_theme_view.dart';
 
+import '../component/page_padding.dart';
+
 class SelectStoryThemePage extends StatelessWidget {
   static const String routeName = '/select_theme';
 
@@ -13,9 +15,7 @@ class SelectStoryThemePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-              horizontal: AppConstants.kAppHorizontalSpace, vertical: AppConstants.kAppVerticalSpace),
+        child: PagePadding(
           child: Column(
             children: [
               SelectStorySpecificationsTitle(

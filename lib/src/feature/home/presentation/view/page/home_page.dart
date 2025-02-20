@@ -16,14 +16,15 @@ class HomePage extends ConsumerWidget {
     final homeStoryState = ref.watch(homeStoryProvider);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorsPalette.glowGrey,
+        backgroundColor: ColorsPalette.primary,
         title: Text(
           homeStoryState.value?.title ?? "",
           style: AppTextStyles.defaultStyle.copyWith(
             fontSize: 22,
             fontWeight: AppTextStyles.fontWeightBold,
-            color: ColorsPalette.eggshell,
+            color: ColorsPalette.glowGrey,
           ),
+          maxLines: 2,
         ),
       ),
       body: SafeArea(
@@ -31,7 +32,7 @@ class HomePage extends ConsumerWidget {
         data: (story) {
           return ListView.separated(
             padding: const EdgeInsets.symmetric(horizontal: AppConstants.kAppHorizontalSpace, vertical: 28),
-            itemCount: 3,
+            itemCount: story.paragraphs.length,
             itemBuilder: (context, index) => ParagraphItem(content: story.paragraphs[index]),
             separatorBuilder: (context, _) => const AppSpacer(height: 12),
           );

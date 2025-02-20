@@ -7,27 +7,31 @@ import 'package:story_teller/src/feature/common/view/component/app_spacer.dart';
 class SelectStorySpecificationsTitle extends StatelessWidget {
   final String title;
   final String description;
-  const SelectStorySpecificationsTitle({super.key,required this.title,required this.description});
+
+  const SelectStorySpecificationsTitle({super.key, required this.title, required this.description});
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       children: [
         const AppSpacer(height: AppConstants.kAppVerticalSpace),
-      Text(
-        title,
-            style: AppTextStyles.defaultStyle
-                .copyWith(fontSize: AppTextStyles.fontSizeXXL),
+        Text(
+          title,
+          style: AppTextStyles.defaultStyle.copyWith(
+            fontSize: AppTextStyles.fontSizeXXL,
           ),
-
+          textAlign: TextAlign.center,
+        ),
         const AppSpacer(height: 8),
         Text(
           description,
-          style: AppTextStyles.defaultStyle.copyWith(color: ColorsPalette.grey,fontSize: AppTextStyles.fontSizeLarge)
-              ,
+          style: AppTextStyles.defaultStyle.copyWith(
+            color: ColorsPalette.grey,
+            fontSize: AppTextStyles.fontSizeLarge,
+          ),
+          textAlign: TextAlign.center,
         ),
         const AppSpacer(height: AppConstants.kAppVerticalSpace),
-
       ],
     );
   }
