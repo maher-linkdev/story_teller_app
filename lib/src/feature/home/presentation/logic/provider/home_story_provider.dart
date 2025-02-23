@@ -13,12 +13,16 @@ final homeStoryProvider = FutureProvider<StoryEntity>((ref) async {
   final content = [
     Content.text(prompt),
   ];
-  final response = await generativeModel.generateContent(content);
-  if (response.text != null && response.text!.isNotEmpty) {
-    String jsonString = StringsUtil.cleanJsonResponseString(response.text!);
+  if (generativeModel != null) {
+    final response = await generativeModel.generateContent(content);
+    if (response.text != null && response!.text!.isNotEmpty) {
+      String jsonString = StringsUtil.cleanJsonResponseString(response.text!);
 
-    final json = jsonDecode(jsonString);
-    return StoryEntity.fromMap(json);
+      final json = jsonDecode(jsonString);
+      return StoryEntity.fromMap(json);
+    }
+    throw Exception('No response');
+  } else {
+    throw Exception("GEMINI API KEY ISN'T SPECIFIED..");
   }
-  throw Exception('No response');
 });
