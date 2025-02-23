@@ -56,11 +56,13 @@ from the user and provides an appropriate story based on their inputs.
 
 GEMINI_API_KEY, Go to Google AI Studio, and create one, if you don't have one.
 
+
 ##### Requirements
 
 - Flutter (latest stable version)
 - Dart SDK
 - GEMINI API KEY
+
 
 ##### Steps
 

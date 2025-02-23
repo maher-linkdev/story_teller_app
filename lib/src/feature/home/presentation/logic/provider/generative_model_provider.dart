@@ -12,3 +12,4 @@ final generativeModelProvider = Provider<GenerativeModel?>((_) {
   }
   return null;
 });
+

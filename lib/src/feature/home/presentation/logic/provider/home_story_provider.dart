@@ -25,4 +25,5 @@ final homeStoryProvider = FutureProvider<StoryEntity>((ref) async {
   } else {
     throw Exception("GEMINI API KEY ISN'T SPECIFIED..");
   }
+
 });
