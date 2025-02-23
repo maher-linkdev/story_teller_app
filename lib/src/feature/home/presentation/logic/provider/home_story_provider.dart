@@ -15,7 +15,7 @@ final homeStoryProvider = FutureProvider<StoryEntity>((ref) async {
   ];
   if (generativeModel != null) {
     final response = await generativeModel.generateContent(content);
-    if (response.text != null && response!.text!.isNotEmpty) {
+    if (response.text != null && response.text!.isNotEmpty) {
       String jsonString = StringsUtil.cleanJsonResponseString(response.text!);
 
       final json = jsonDecode(jsonString);
