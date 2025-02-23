@@ -52,11 +52,17 @@ from the user and provides an appropriate story based on their inputs.
 
 #### Installation & Setup
 
+#### Prerequisites
+
+GEMINI_API_KEY, Go to Google AI Studio, and create one, if you don't have one.
+
+
 ##### Requirements
 
 - Flutter (latest stable version)
 - Dart SDK
-- Internet connection (for AI generation)
+- GEMINI API KEY
+
 
 ##### Steps
 
@@ -71,7 +77,7 @@ from the user and provides an appropriate story based on their inputs.
    ```
 3. Run the app:
    ```sh
-   flutter run
+   flutter run --dart-define=GEMINI_API_KEY="REPLACE_THIS_TEXT_WITH_YOUR_GEMINI_API_KEY"
    ```
 
 #### License
