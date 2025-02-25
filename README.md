@@ -32,6 +32,10 @@ from the user and provides an appropriate story based on their inputs.
 2. **Generate Story**: The AI processes your inputs and creates a unique story.
 3. **Read & Enjoy**: Read your generated story and make edits if needed.
 
+#### TODO FEATURES
+
+* Offline mode support.
+
 #### Screenshots
 
 ##### Splash Page
